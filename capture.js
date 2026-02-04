@@ -25,7 +25,10 @@ async function captureScreenshotAndSend() {
     // Preencher formulário de login
     await page.type('#j_username', 'admin'); // Substitua 'seu-usuario' pelo nome de usuário do Jenkins
     await page.type('#j_password', 'admin'); // Substitua 'sua-senha' pela senha do Jenkins
-    await page.click('form[name="login"] > button[type="submit"]'); // Enviar formulário de login
+    await Promise.all([
+        page.click('form[name="login"] > button[type="submit"]'),
+        page.waitForNavigation({ waitUntil: 'networkidle2' })
+    ]); // Enviar formulário de login
 
     await page.goto(`http://localhost:8080/job/${jobName}/${buildNumber}/allure/`);
     // Ir para a página do relatório Allure após o login
@@ -85,3 +88,4 @@ async function captureScreenshotAndSend() {
 }
 
 captureScreenshotAndSend();
+
