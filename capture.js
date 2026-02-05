@@ -42,7 +42,7 @@ async function captureScreenshotAndSend() {
 
     const webhook = new WebhookClient({ url: '' + webHook });
 
-    let message = "# Relatorio de Testes/API e UI/\n"
+    let message = "# Relatorio de Testes API\n"
     message += `**Branch:** ${branchBuild}\n`
     message += `**Build:** ${buildNumber}\n`
     message += `**Status:** ${buildResult}\n`
@@ -88,4 +88,5 @@ async function captureScreenshotAndSend() {
 }
 
 captureScreenshotAndSend();
+
 
