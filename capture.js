@@ -44,12 +44,28 @@ async function captureScreenshotAndSend() {
 
     const webhook = new WebhookClient({ url: '' + webHook });
 
-    let message = "# Relatório de Testes API\n";
-    message += `**Branch:** ${branchBuild}\n`;
-    message += `**Build:** #${buildNumber}\n`;
-    message += `**Status:** ${buildResult}\n`;
-    message += `**Duração:** ${buildDuration}\n`;
-    message += `**Pipeline:** ${buildUrl}\n`;
+    const statusEmoji = {
+    SUCCESS: "✅",
+    FAILURE: "❌",
+    UNSTABLE: "⚠️",
+    ABORTED: "⏹️"
+};
+
+    let message = `
+    ━━━━━━━━━━━━━━━━━━━━━━
+    🧪 **RELATÓRIO DE TESTES – API**
+    ━━━━━━━━━━━━━━━━━━━━━━
+    
+    🌿 **Branch:** \`${branchBuild}\`
+    🏗️ **Build:** \`#${buildNumber}\`
+    ${statusEmoji[buildResult] || "❓"} **Status:** **${buildResult}**
+    ⏱️ **Duração:** \`${buildDuration}\`
+    
+    🔗 **Pipeline:**  
+    ${buildUrl}
+    
+    ━━━━━━━━━━━━━━━━━━━━━━
+    `;
 
 
     let color
@@ -93,6 +109,7 @@ async function captureScreenshotAndSend() {
 }
 
 captureScreenshotAndSend();
+
 
 
 
