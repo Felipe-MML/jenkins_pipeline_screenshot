@@ -2,11 +2,13 @@ const puppeteer = require('puppeteer');
 const fs = require('fs');
 const { WebhookClient } = require('discord.js');
 
-const jobName = process.argv[2];
-const buildNumber = process.argv[3];
-const buildResult = process.argv[4];
-const branchBuild = process.argv[5];
-const webHook = process.argv[6];
+const jobName       = process.argv[2];
+const buildNumber   = process.argv[3];
+const buildResult   = process.argv[4];
+const branchBuild   = process.argv[5];
+const webHook       = process.argv[6];
+const buildDuration = process.argv[7];
+const buildUrl      = process.argv[8];
 
 
 async function captureScreenshotAndSend() {
@@ -42,10 +44,13 @@ async function captureScreenshotAndSend() {
 
     const webhook = new WebhookClient({ url: '' + webHook });
 
-    let message = "# Relatorio de Testes API\n"
-    message += `**Branch:** ${branchBuild}\n`
-    message += `**Build:** ${buildNumber}\n`
-    message += `**Status:** ${buildResult}\n`
+    let message = "# Relatório de Testes API\n";
+    message += `**Branch:** ${branchBuild}\n`;
+    message += `**Build:** #${buildNumber}\n`;
+    message += `**Status:** ${buildResult}\n`;
+    message += `**Duração:** ${buildDuration}\n`;
+    message += `**Pipeline:** ${buildUrl}\n`;
+
 
     let color
 
@@ -88,5 +93,6 @@ async function captureScreenshotAndSend() {
 }
 
 captureScreenshotAndSend();
+
 
 
