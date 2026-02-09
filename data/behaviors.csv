@@ -1,9 +1,9 @@
 "Epic","Feature","Story","FAILED","BROKEN","PASSED","SKIPPED","UNKNOWN"
-"","#2 - Login","","2","0","5","0","0"
-"","#3 - Recuperação de Senha","","0","0","6","0","0"
-"","#4 - Trocar Senha","","0","0","9","0","0"
-"","#1 - Abrir Conta","","0","0","5","0","0"
+"","#3 - Recuperação de Senha","","1","0","5","0","0"
 "","#6 - Dados Sociais","","0","0","2","0","0"
+"","#1 - Abrir Conta","","0","0","5","0","0"
+"","#2 - Login","","2","0","5","0","0"
+"","#4 - Trocar Senha","","0","0","9","0","0"
 "","#5 - Perfil","","0","0","1","0","0"
 "","#2 Login","Como cliente do DBC Bank 
 Eu quero poder realizar login 
