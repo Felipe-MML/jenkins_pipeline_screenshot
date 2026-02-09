@@ -1,0 +1,1 @@
+[{"values":["linux"],"name":"os_platform"},{"values":["6.6.87.2-microsoft-standard-WSL2"],"name":"os_release"},{"values":["#1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025"],"name":"os_version"},{"values":["v24.13.0"],"name":"node_version"}]
