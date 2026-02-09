@@ -61,7 +61,7 @@ async function captureScreenshotAndSend() {
     ${statusEmoji[buildResult] || "❓"} **Status:** **${buildResult}**
     ⏱️ **Duração:** \`${buildDuration}\`
     
-    🔗 **Pipeline:**  
+    🔗 **Resultado dos Testes:**  
     ${buildUrl}
     
     ━━━━━━━━━━━━━━━━━━━━━━
@@ -109,6 +109,7 @@ async function captureScreenshotAndSend() {
 }
 
 captureScreenshotAndSend();
+
 
 
 
