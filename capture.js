@@ -59,7 +59,7 @@ async function captureScreenshotAndSend() {
     🌿 **Branch:** \`${branchBuild}\`
     🏗️ **Build:** \`#${buildNumber}\`
     ${statusEmoji[buildResult] || "❓"} **Status:** **${buildResult}**
-    ⏱️ **Duração:** \`${buildDuration}.replace(' and counting', '')\`
+    ⏱️ **Duração:** \`${buildDuration.replace(' and counting', '')}\`
     
     🔗 **Resultado dos Testes:**  
     ${buildUrl}
@@ -109,6 +109,7 @@ async function captureScreenshotAndSend() {
 }
 
 captureScreenshotAndSend();
+
 
 
 
