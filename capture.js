@@ -69,7 +69,7 @@ async function captureScreenshotAndSend() {
     🔗 **Relatório da build:**
     ${issueUrl}
 
-    🔗 **Relatório da build:**
+    🔗 **Dashboard Lighthouse:**
     ${lighthouseUrl}
     ━━━━━━━━━━━━━━━━━━━━━━
     `;
@@ -116,6 +116,7 @@ async function captureScreenshotAndSend() {
 }
 
 captureScreenshotAndSend();
+
 
 
 
