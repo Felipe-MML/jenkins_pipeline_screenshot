@@ -9,6 +9,7 @@ const branchBuild   = process.argv[5];
 const webHook       = process.argv[6];
 const buildDuration = process.argv[7];
 const buildUrl      = process.argv[8];
+const issueUrl      = process.argv[9];
 
 
 async function captureScreenshotAndSend() {
@@ -63,6 +64,9 @@ async function captureScreenshotAndSend() {
     
     🔗 **Resultado dos Testes:**  
     ${buildUrl}
+
+    🔗 **Relatório da build:**
+    ${issueUrl}
     
     ━━━━━━━━━━━━━━━━━━━━━━
     `;
@@ -109,6 +113,7 @@ async function captureScreenshotAndSend() {
 }
 
 captureScreenshotAndSend();
+
 
 
 
