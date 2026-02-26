@@ -10,6 +10,7 @@ const webHook       = process.argv[6];
 const buildDuration = process.argv[7];
 const buildUrl      = process.argv[8];
 const issueUrl      = process.argv[9];
+const lighthouseUrl = process.argv[10]
 
 
 async function captureScreenshotAndSend() {
@@ -67,7 +68,9 @@ async function captureScreenshotAndSend() {
 
     🔗 **Relatório da build:**
     ${issueUrl}
-    
+
+    🔗 **Relatório da build:**
+    ${lighthouseUrl}
     ━━━━━━━━━━━━━━━━━━━━━━
     `;
 
@@ -113,6 +116,7 @@ async function captureScreenshotAndSend() {
 }
 
 captureScreenshotAndSend();
+
 
 
 
