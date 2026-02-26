@@ -52,48 +52,59 @@ async function captureScreenshotAndSend() {
     UNSTABLE: "⚠️",
     ABORTED: "⏹️"
 };
-
-    let message = `
-    ━━━━━━━━━━━━━━━━━━━━━━
-    🧪 **RELATÓRIO DE TESTES – API**
-    ━━━━━━━━━━━━━━━━━━━━━━
     
-    🌿 **Branch:** \`${branchBuild}\`
-    🏗️ **Build:** \`#${buildNumber}\`
-    ${statusEmoji[buildResult] || "❓"} **Status:** **${buildResult}**
-    ⏱️ **Duração:** \`${buildDuration.replace(' and counting', '')}\`
-    
-    🔗 **Resultado dos Testes:**  
-    ${buildUrl}
-
-    🔗 **Relatório da build:**
-    ${issueUrl}
-
-    🔗 **Dashboard Lighthouse:**
-    ${lighthouseUrl}
-    ━━━━━━━━━━━━━━━━━━━━━━
-    `;
-
-
-    let color
-
+    let colorHex;
     switch (buildResult) {
         case 'SUCCESS':
-            color = 65280;
+            colorHex = 0x2ECC71; // Verde vibrante
             break;
         case 'FAILURE':
-            color = 16711680;
+            colorHex = 0xE74C3C; // Vermelho vibrante
             break;
         case 'UNSTABLE':
-            color = 16744192;
+            colorHex = 0xF1C40F; // Amarelo
             break;
         case 'ABORTED':
-            color = 8421504;
+            colorHex = 0x95A5A6; // Cinza
             break;
         default: 
-            color = 16711680;
+            colorHex = 0xE74C3C;
             break;
     }
+
+    const embed = {
+        title: "🧪 RELATÓRIO DE TESTES – API",
+        color: colorHex,
+        fields: [
+            {
+                name: '🌿 Branch',
+                value: `\`${branchBuild}\``,
+                inline: true // O inline true coloca os itens lado a lado
+            },
+            {
+                name: '🏗️ Build',
+                value: `\`#${buildNumber}\``,
+                inline: true
+            },
+            {
+                name: 'Status',
+                value: `${statusEmoji[buildResult] || "❓"} **${buildResult}**`,
+                inline: true
+            },
+            {
+                name: '⏱️ Duração',
+                value: `\`${buildDuration.replace(' and counting', '')}\``,
+                inline: true
+            }
+        ],
+        
+        description: `**Links Rápidos:**\n🔗 [Resultado dos Testes](${buildUrl})\n📊 [Relatório da build](${issueUrl})\n🚀 [Dashboard Lighthouse](${lighthouseUrl})`,
+        image: { url: "attachment://screenshot.png" },
+        footer: { text: "Jenkins Automated Pipeline" },
+        timestamp: new Date().toISOString()
+    };
+
+    
 
     await webhook.send({
         username: "Jenkins",
@@ -102,11 +113,7 @@ async function captureScreenshotAndSend() {
             attachment: './screenshot.png',
             name: 'screenshot.png'
         }],
-        embeds: [{
-            description: `${message}`,
-            color,
-            image:{ url:"attachment://screenshot.png"},
-          }]
+        embeds: [embed]
     });
 
 
@@ -116,6 +123,7 @@ async function captureScreenshotAndSend() {
 }
 
 captureScreenshotAndSend();
+
 
 
 
