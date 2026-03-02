@@ -1,40 +1,44 @@
 "Epic","Feature","Story","FAILED","BROKEN","PASSED","SKIPPED","UNKNOWN"
-"","#10 - Limite de Transações","","5","0","0","0","0"
-"","#12 - Chave Pix","","1","0","13","0","0"
-"","#16/2 - Gerenciar Faturas","","4","0","5","0","0"
-"","#2 - Login","","2","0","5","0","0"
-"","#3 - Recuperação de Senha","","0","0","6","0","0"
-"","#11 - Histórico de Transações","","8","0","0","0","0"
-"","#8 - Transferência","","2","0","6","0","0"
 "","#9 - PIX","","0","0","14","0","0"
-"","#7 - Depósito","","2","0","11","0","0"
+"","#16 Pagamento de Boletos","","7","0","5","0","0"
+"","#3 - Recuperação de Senha","","0","0","6","0","0"
 "","#13 - Guardar dinheiro (Caixinha)","","0","0","9","0","0"
-"","#14 - Cartão de Crédito","","2","0","14","0","0"
-"","#4 - Trocar Senha","","1","0","8","0","0"
+"","#8 - Transferência","","0","0","8","0","0"
+"","#14 - Cartão de Crédito","","0","0","16","0","0"
+"","#15 - Cartão de Débito","","0","0","5","0","0"
+"","#11 - Histórico de Transações","","2","0","6","0","0"
+"","#12 - Chave Pix","","1","0","13","0","0"
+"","#2 - Login","","2","0","5","0","0"
 "","#5 - Perfil","","0","0","1","0","0"
-"","#6 - Dados Sociais [API] - PATCH","","0","0","1","0","0"
+"","#7 - Depósito","","3","0","10","0","0"
 "","#1 - Abrir Conta","","0","0","5","0","0"
+"","#4 - Trocar Senha","","0","0","9","0","0"
+"Cartões","#15 - Pagamento Cartão de Crédito com saldo da conta","","5","0","1","0","0"
+"","#10 - Limite de Transações","","5","0","0","0","0"
+"","#16/2 - Gerenciar Faturas","","4","0","5","0","0"
+"","#6 - Dados Sociais [API] - PATCH","","0","0","1","0","0"
 "","#6 - Dados Sociais","","0","0","1","0","0"
-"","#10 Limite de Transações","Como cliente do DBC Bank Eu quero configurar limites para diferentes tipos de transações através do sistema do banco Para que que eu tenha mais controle sobre meus gastos e evite movimentações indevidas na minha conta.","0","0","3","0","0"
+"","#4 Troca Senha de Acesso","Como cliente do DBC Bank Eu quero poder gerenciar minhas senhas de acesso Para que que eu possa manter a segurança das minhas informações e operações bancárias de forma conveniente e autônoma","0","0","3","0","0"
+"","#12 - Chave PIX [WEB]","Como cliente do DBC Bank 
+Eu quero poder criar e gerenciar minhas chaves PIX de forma rápida e fácil, utilizando o sistema do banco 
+Para que eu possa realizar transações de forma segura e eficiente","0","0","5","0","0"
+"","#13 - Guardar Dinheiro (Caixinha)","Como cliente do DBC Bank 
+Eu quero poder guardar dinheiro em uma caixinha 
+Para que eu possa organizar minhas finanças de forma eficiente","0","0","2","0","0"
+"","#3 Recuperação Senha de Acesso","Como cliente do DBC Bank Eu quero poder redefinir minha senha de acesso caso a esqueça Para que que eu possa recuperar o acesso à minha conta bancária de forma segura.","0","0","1","0","0"
+"","#1 Abrir Conta","Como potencial cliente do DBC Bank Eu quero poder me cadastrar facilmente Para que que eu possa abrir uma conta e utilizar os serviços de forma segura e conveniente","1","0","2","0","0"
+"","#14 Cartão de Crédito","Como cliente do DBC Bank 
+Eu quero gerenciar meu cartão de crédito 
+Para que eu possa consultar e ajustar meu limite com segurança","0","0","3","0","0"
+"","#9 - PIX","Como cliente do DBC Bank, eu quero transferir via PIX para enviar dinheiro rapidamente.","1","0","2","1","0"
+"","#16 Pagamento de Boletos","CComo cliente do DBC Bank Eu quero poder realizar pagamentos de boletos Para que que eu possa realizar o pagamentos de contas de forma rápida e segura.","1","0","1","0","0"
 "","#7 Depósito","Como cliente do DBC Bank 
 Eu quero poder realizar depósitos de forma rápida e fácil, utilizando o sistema do banco 
 Para que que eu possa adicionar fundos à minha conta corrente quando necessário","0","0","2","0","0"
 "","#2 Login","Como cliente do DBC Bank 
 Eu quero poder realizar login 
 Para que que eu possa gerenciar minhas finanças de forma segura e eficiente","2","0","4","0","0"
-"","#3 Recuperação Senha de Acesso","Como cliente do DBC Bank Eu quero poder redefinir minha senha de acesso caso a esqueça Para que que eu possa recuperar o acesso à minha conta bancária de forma segura.","0","0","1","0","0"
-"","#13 - Guardar Dinheiro (Caixinha)","Como cliente do DBC Bank 
-Eu quero poder guardar dinheiro em uma caixinha 
-Para que eu possa organizar minhas finanças de forma eficiente","0","0","2","0","0"
-"","#9 - PIX","Como cliente do DBC Bank, eu quero transferir via PIX para enviar dinheiro rapidamente.","1","0","2","1","0"
-"","#12 - Chave PIX [WEB]","Como cliente do DBC Bank 
-Eu quero poder criar e gerenciar minhas chaves PIX de forma rápida e fácil, utilizando o sistema do banco 
-Para que eu possa realizar transações de forma segura e eficiente","1","0","4","0","0"
-"","#4 Troca Senha de Acesso","Como cliente do DBC Bank Eu quero poder gerenciar minhas senhas de acesso Para que que eu possa manter a segurança das minhas informações e operações bancárias de forma conveniente e autônoma","0","0","3","0","0"
-"","#1 Abrir Conta","Como potencial cliente do DBC Bank Eu quero poder me cadastrar facilmente Para que que eu possa abrir uma conta e utilizar os serviços de forma segura e conveniente","1","0","2","0","0"
-"","#14 Cartão de Crédito","Como cliente do DBC Bank 
-Eu quero gerenciar meu cartão de crédito 
-Para que eu possa consultar e ajustar meu limite com segurança","0","0","3","0","0"
 "","#8 Transferência","Como cliente do DBC Bank 
 Eu quero poder realizar transferências de forma rápida e intuitiva, utilizando o sistema do banco 
 Para que que eu possa transferir fundo para outra conta corrente quando necessário","0","0","1","0","0"
+"","","","0","1","0","0","0"
